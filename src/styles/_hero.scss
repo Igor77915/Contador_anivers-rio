@@ -1,0 +1,97 @@
+@use'variaveis';
+
+
+.hero{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-image: url(../images/fundo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+
+    .container{
+        position: relative;
+        color: variaveis.$textColor;
+    }
+
+    &::before{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        content: '';
+        opacity: 0.4;
+
+    }
+
+    &__logo{
+        margin: 0 auto;
+        width: 400px;
+        display: block;
+    }
+    &__text{
+        color: variaveis.$textColor;
+        margin-top: 20px;
+        margin-bottom: 64px;
+        line-height: 56px;
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+
+        span{
+            margin-top: 50px;
+            color: rgb(51, 51, 224);
+
+            div{
+                background-color: white;
+                border: 3px ridge rgb(51, 51, 224);
+                border-radius: 6px;
+                padding: 30px;
+                color: rgb(51, 51, 224);
+            }
+        }
+    }
+        @media (max-width:640px) {
+            padding: 40 0 ;
+            &__logo{
+                width: 150px;
+            }
+
+            &__text{
+                font-size: 15px;
+                line-height: 16px;
+                margin: 24px 0;
+
+            }
+            #contador{
+
+                div{
+                    padding: 12px;
+                    justify-content: space-between;
+                }
+                
+            }
+            
+        }
+        @media (max-width:1024px) {
+            #contador{
+
+                div{
+                    padding: 12px;
+                    justify-content: space-between;
+                }
+                
+            }
+        }
+
+        #contador{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+}
